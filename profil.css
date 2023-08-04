@@ -1,0 +1,124 @@
+/* Profil Section */
+.profil {
+  font-size: 10pt;
+  height: 100vh;
+  background-color: var(--primary);
+  overflow: hidden;
+  box-sizing: border-box;
+  display: none;
+}
+
+.profil .left {
+  position: relative;
+  flex: 1;
+  background-image: url("300ppi/cover-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% 0;
+  box-sizing: border-box;
+}
+
+.profil .left::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(19, 19, 19, 1) 30%,
+    rgba(19, 19, 19, 0.6) 70%,
+    rgba(19, 19, 19, 0) 100%
+  );
+}
+
+.profil .left h1 {
+  text-align: center;
+  color: rgb(65, 56, 56);
+}
+
+.profil .right {
+  position: relative;
+  flex: 2;
+  padding: 8% 4% 0 4%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.profil .right .about {
+  flex: 3.5;
+}
+
+.profil .right .about .tittle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.profil .right .about .deskripsi-content {
+  display: flex;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.deskripsi-content .programmer {
+  width: 45%;
+  padding: 1.5%;
+  box-sizing: border-box;
+}
+
+.deskripsi-content .programming-skill {
+  width: 45%;
+  padding: 1.5%;
+  box-sizing: border-box;
+}
+
+.programmer p {
+  text-align: justify;
+}
+
+.deskripsi-content .logo-designer {
+  width: 45%;
+  padding: 1.5%;
+  box-sizing: border-box;
+}
+
+.deskripsi-content .logo-skill {
+  width: 45%;
+  padding: 1.5%;
+  box-sizing: border-box;
+}
+
+.logo-designer p {
+  text-align: justify;
+}
+
+.gold {
+  color: rgb(255, 166, 0);
+}
+
+.h3 {
+  text-align: center;
+}
+
+.my-app {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.my-app .thumbnail {
+  width: 18%;
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail img {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}

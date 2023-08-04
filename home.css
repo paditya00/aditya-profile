@@ -1,0 +1,95 @@
+* {
+  --primary: rgb(20, 20, 20);
+  --secondary: rgb(255, 0, 225);
+}
+
+/* :target {
+  background-color: rgba(214, 185, 214, 0.011);
+  padding: 50px;
+  box-shadow: 0 0 20px var(--secondary);
+  transition: 0.5s;
+} */
+
+/* Main Content */
+/* #home {
+  display: none;
+} */
+
+.home {
+  height: 100vh;
+  background-color: var(--primary);
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 2%;
+}
+
+.home .home-content {
+  position: relative;
+  flex: 2;
+}
+
+.home-content #its-me {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60%;
+  padding: 3% 3%;
+  box-sizing: border-box;
+}
+
+#its-me button {
+  display: flex;
+  font-size: 1em;
+  padding: 0.5em 1.3em;
+  border: 2px solid var(--secondary);
+  background-color: transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#its-me button:hover {
+  background-color: var(--secondary);
+  transition: 0.5s;
+}
+
+.home-content #its-me #social-media {
+  position: absolute;
+  display: flex;
+  width: 80%;
+  height: 50px;
+  margin-top: 10%;
+  justify-content: space-between;
+}
+
+#social-media a {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+  justify-content: center;
+  align-items: center;
+  font-size: 18pt;
+}
+
+#social-media a:hover {
+  background-color: var(--secondary);
+  box-shadow: 0 0 20px rgb(255, 0, 255);
+  transition: 0.5s;
+}
+
+#home .img-content {
+  position: relative;
+  flex: 1;
+}
+
+.img-content img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  filter: drop-shadow(0 0 20px var(--secondary));
+}

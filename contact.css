@@ -1,0 +1,57 @@
+.contact {
+  font-size: 10pt;
+  height: 100vh;
+  padding-top: 5%;
+  background-color: var(--primary);
+  overflow: hidden;
+  box-sizing: border-box;
+  display: none;
+  justify-content: space-between;
+}
+
+.contact .container-contact {
+  position: absolute;
+  padding: 0 4% 0 4%;
+  width: 60%;
+  box-sizing: border-box;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  font-size: 3rem;
+  color: rgb(19, 255, 19);
+  transition: 0.8s ease;
+}
+
+.foto-profil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgb(19, 255, 19);
+  filter: drop-shadow(0 0 10px rgb(19, 255, 19));
+  margin: auto;
+  position: relative;
+}
+
+.foto-profil img {
+  width: 150%;
+  position: absolute;
+  transform: translate(-15%, -15%);
+}
+
+.link-contact {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.link-contact > a:hover .icon {
+  filter: drop-shadow(0 0 10px rgb(19, 255, 19));
+  color: black;
+  transition: 0.8s ease;
+}

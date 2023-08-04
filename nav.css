@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(19, 19, 19);
+  color: white;
+}
+
+/* Navigation Bar */
+.container {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 70px;
+  top: 0;
+  background-color: var(--primary);
+  padding: 0 2%;
+  color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 30px var(--secondary);
+  overflow: hidden;
+  z-index: 99999;
+  transition: 0.5s ease;
+}
+
+.container.container-profil {
+  box-shadow: 0px 10px 30px rgb(255, 166, 0);
+  transition: 0.5s ease;
+}
+
+.container.container-product {
+  box-shadow: 0px 10px 30px rgb(255, 19, 19);
+  transition: 0.5s ease;
+}
+
+.container.container-contact {
+  box-shadow: 0px 10px 30px rgb(19, 255, 19);
+  transition: 0.5s ease;
+}
+
+/* Logo Section */
+.logo-cont {
+  display: flex;
+  flex: 1;
+}
+
+h3 {
+  margin: auto 0;
+  pointer-events: none;
+}
+
+span {
+  color: var(--secondary);
+  transition: 0.5s ease;
+}
+
+.span-profil {
+  color: rgb(255, 166, 0);
+  transition: 0.5s ease;
+}
+
+.span-product {
+  color: rgb(255, 19, 19);
+  transition: 0.5s ease;
+}
+
+.span-contact {
+  color: rgb(19, 255, 19);
+  transition: 0.5s ease;
+}
+
+/* Menu Section */
+.menu-cont {
+  display: flex;
+  flex: 4;
+  text-align: center;
+  padding: 0 10%;
+  box-sizing: border-box;
+  height: 70px;
+  z-index: 0;
+}
+
+.link-content {
+  position: relative;
+  display: flex;
+  width: 20%;
+  height: 70px;
+  margin: auto;
+}
+
+.link-content .menu {
+  margin: auto;
+  text-decoration: none;
+  color: white;
+}
+
+.link-content .link {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  color: white;
+  transform: translateY(100%);
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.link-content .link.link-profil {
+  background-color: white;
+  color: rgb(255, 166, 0);
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.link-content .link.link-product {
+  background-color: white;
+  color: rgb(255, 19, 19);
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.link-content .link.link-contact {
+  background-color: white;
+  color: rgb(19, 255, 19);
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.link-content .link .feather {
+  margin: auto;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid var(--secondary);
+  transform: scaleX(0.5);
+  padding-bottom: 0.5rem;
+  transition: 0.5s ease;
+}
+
+.active-profil::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid rgb(255, 166, 0);
+  transform: scaleX(0.5);
+  padding-bottom: 0.5rem;
+  transition: 0.5s ease;
+}
+
+.active-product::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid rgb(255, 19, 19);
+  transform: scaleX(0.5);
+  padding-bottom: 0.5rem;
+  transition: 0.5s ease;
+}
+
+.active-contact::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid rgb(19, 255, 19);
+  transform: scaleX(0.5);
+  padding-bottom: 0.5rem;
+  transition: 0.5s ease;
+}
+
+.hover-link:hover .link {
+  transform: translateY(0%);
+  transition: transform 1s;
+}
+
+.menu.active {
+  color: var(--secondary);
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.menu.active-profil {
+  color: rgb(255, 166, 0);
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.menu.active-product {
+  color: rgb(255, 19, 19);
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.menu.active-contact {
+  color: rgb(19, 255, 19);
+  font-weight: 700;
+  transition: 0.5s ease;
+}
