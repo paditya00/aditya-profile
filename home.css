@@ -78,10 +78,20 @@
   color: white;
 }
 
+#social-media a .bi {
+  color:white;
+  transition: 0.5s;
+}
+
 #social-media a:hover {
   background-color: var(--secondary);
   box-shadow: 0 0 20px rgb(255, 0, 255);
   color: black;
+  transition: 0.5s;
+}
+
+#social-media a:hover .bi {
+  color:black;
   transition: 0.5s;
 }
 
