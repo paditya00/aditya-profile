@@ -1,4 +1,5 @@
 const menuLink = document.querySelectorAll(".menu");
+let widht = document.documentElement.clientWidth;
 
 menuLink.forEach((m) => {
   m.addEventListener("click", function () {
@@ -59,7 +60,11 @@ menuLink.forEach((m) => {
     console.log(this);
     let text = this.textContent.toLowerCase();
     console.log(`yang dipencet ${text}`);
-    document.querySelector(`.${text}`).style.display = "flex";
+    if (widht <= 480) {
+      document.querySelector(`.${text}`).style.display = "block";
+    } else {
+      document.querySelector(`.${text}`).style.display = "flex";
+    }
     if (text === "profil") {
       document.querySelector(".container").classList.add(`container-${text}`);
       document.querySelector("span").classList.add(`span-${text}`);
@@ -92,4 +97,31 @@ menuLink.forEach((m) => {
       this.parentElement.classList.remove("hover-link");
     }
   });
+});
+
+// Burger Button Click
+
+const burger = document.querySelector(".btn");
+const cross = document.querySelector(".btn-x");
+
+window.addEventListener("resize", () => {
+  widht = document.documentElement.clientWidth;
+  if (widht > 480) {
+    burger.style.display = "none";
+    cross.style.display = "none";
+  } else {
+    burger.style.display = "block";
+  }
+});
+
+burger.addEventListener("click", function () {
+  document.querySelector(".menu-cont").style.display = "flex";
+  this.style.display = "none";
+  cross.style.display = "block";
+});
+
+cross.addEventListener("click", function () {
+  document.querySelector(".menu-cont").style.display = "none";
+  this.style.display = "none";
+  burger.style.display = "block";
 });
