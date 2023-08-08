@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 
+.tag-name {
+  text-align: center;
+}
+
 .product .programming {
   position: relative;
   flex: 1;
@@ -68,4 +72,29 @@
 
 .my-product p {
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .product {
+    height: auto;
+    overflow: visible;
+    padding-bottom: 4%;
+  }
+
+  .product .programming {
+    position: static;
+    padding-top: 0;
+  }
+
+  .product .logo {
+    position: static;
+    padding-top: 0;
+  }
+
+  .my-product .thumbnail-logo {
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
 }
