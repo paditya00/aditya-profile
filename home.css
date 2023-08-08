@@ -3,18 +3,6 @@
   --secondary: rgb(255, 0, 225);
 }
 
-/* :target {
-  background-color: rgba(214, 185, 214, 0.011);
-  padding: 50px;
-  box-shadow: 0 0 20px var(--secondary);
-  transition: 0.5s;
-} */
-
-/* Main Content */
-/* #home {
-  display: none;
-} */
-
 .home {
   height: 100vh;
   background-color: var(--primary);
@@ -48,8 +36,8 @@
   box-sizing: border-box;
   text-align: center;
   justify-content: center;
-  color: white;
   align-items: center;
+  color: white;
 }
 
 #its-me button:hover {
@@ -78,20 +66,10 @@
   color: white;
 }
 
-#social-media a .bi {
-  color:white;
-  transition: 0.5s;
-}
-
 #social-media a:hover {
   background-color: var(--secondary);
   box-shadow: 0 0 20px rgb(255, 0, 255);
   color: black;
-  transition: 0.5s;
-}
-
-#social-media a:hover .bi {
-  color:black;
   transition: 0.5s;
 }
 
@@ -105,4 +83,44 @@
   width: 100%;
   bottom: 0;
   filter: drop-shadow(0 0 20px var(--secondary));
+}
+
+@media (max-width: 480px) {
+  .home {
+    min-height: 100vh;
+    display: block;
+    overflow: visible;
+  }
+
+  .home .home-content {
+    position: static;
+    display: block;
+  }
+
+  .home-content #its-me {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+
+  #its-me button {
+    margin: auto;
+  }
+
+  .home-content #its-me #social-media {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .img-content img {
+    position: relative;
+    width: 100%;
+    bottom: -20px;
+    filter: drop-shadow(0 0 20px var(--secondary));
+    box-sizing: border-box;
+  }
 }
