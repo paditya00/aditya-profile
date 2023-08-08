@@ -32,9 +32,8 @@
   );
 }
 
-.profil .left h1 {
-  text-align: center;
-  color: rgb(65, 56, 56);
+.line {
+  display: none;
 }
 
 .profil .right {
@@ -64,12 +63,14 @@
 }
 
 .deskripsi-content .programmer {
+  order: 1;
   width: 45%;
   padding: 1.5%;
   box-sizing: border-box;
 }
 
 .deskripsi-content .programming-skill {
+  order: 3;
   width: 45%;
   padding: 1.5%;
   box-sizing: border-box;
@@ -80,12 +81,14 @@
 }
 
 .deskripsi-content .logo-designer {
+  order: 2;
   width: 45%;
   padding: 1.5%;
   box-sizing: border-box;
 }
 
 .deskripsi-content .logo-skill {
+  order: 4;
   width: 45%;
   padding: 1.5%;
   box-sizing: border-box;
@@ -121,4 +124,72 @@
   width: 80%;
   height: auto;
   margin: auto;
+}
+
+@media (max-width: 480px) {
+  .profil {
+    min-height: 100vh;
+    overflow: visible;
+    display: none;
+  }
+
+  .profil .right {
+    position: static;
+    display: block;
+    padding: 1% 4%;
+  }
+
+  .profil .right .about .tittle {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .profil .right .about .deskripsi-content {
+    display: block;
+    width: 100%;
+  }
+
+  .deskripsi-content .programmer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .deskripsi-content .programming-skill {
+    width: 100%;
+  }
+
+  .deskripsi-content .logo-designer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .deskripsi-content .logo-skill {
+    width: 100%;
+  }
+
+  .profil .left {
+    position: relative;
+    flex: none;
+    height: 50vh;
+  }
+
+  .profil .left::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: -10px;
+    background: linear-gradient(
+      to top,
+      rgba(19, 19, 19, 1) 30%,
+      rgba(19, 19, 19, 0.6) 70%,
+      rgba(19, 19, 19, 0) 100%
+    );
+  }
+
+  .line {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0;
+  }
 }
